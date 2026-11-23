@@ -1,0 +1,80 @@
+:root {
+  color: #17212b;
+  background: #f3f6f5;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button, input, select { font: inherit; }
+button {
+  border: 0;
+  border-radius: 0.7rem;
+  background: #176b62;
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+}
+button:disabled { cursor: wait; opacity: 0.55; }
+
+.app-shell { margin: 0 auto; max-width: 1400px; padding: 2rem; }
+.app-header { margin-bottom: 1.5rem; max-width: 700px; }
+.app-header h1 { font-size: clamp(2.4rem, 6vw, 4.5rem); letter-spacing: -0.06em; margin: 0; }
+.app-header p { color: #53616b; font-size: 1.05rem; line-height: 1.5; }
+.info-copy, .interpretation-copy { color: #53616b; font-size: 0.88rem; line-height: 1.5; max-width: 760px; }
+.interpretation-copy { margin: 0 0 1rem; }
+.eyebrow { color: #b34d36; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.12em; margin: 0 0 0.4rem; text-transform: uppercase; }
+h2 { margin: 0; }
+.settings-panel, .visual-panel, .metadata-card, .empty-state {
+  background: white;
+  border: 1px solid #dce5e2;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1.5rem #17332d0d;
+  margin-bottom: 1rem;
+  padding: 1.25rem;
+}
+.settings-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); margin: 1.25rem 0; }
+label { color: #4a5963; display: grid; font-size: 0.85rem; gap: 0.4rem; }
+input, select { border: 1px solid #c6d2cf; border-radius: 0.5rem; color: #17212b; min-height: 2.4rem; padding: 0.4rem 0.55rem; }
+input[type="range"] { accent-color: #176b62; padding: 0; }
+label span { color: #176b62; font-weight: 700; }
+.helper-text, .empty-inline { color: #68757d; font-size: 0.85rem; margin-bottom: 0; }
+.result-note { color: #53616b; font-size: 0.85rem; margin: 0 0 1rem; }
+.error-banner { background: #fff0ed; border: 1px solid #e6a99b; border-radius: 0.7rem; color: #8d2f22; padding: 0.8rem 1rem; }
+.empty-state { color: #53616b; text-align: center; }
+.metadata-card { display: flex; flex-wrap: wrap; gap: 2rem; }
+.metadata-card div { display: grid; gap: 0.2rem; }
+.section-heading { align-items: center; display: flex; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
+.section-heading > span { color: #68757d; font-size: 0.85rem; }
+.track { align-items: center; display: flex; gap: 1rem; margin: 0.65rem 0; }
+.track-label { min-width: 5rem; }
+.track-content { min-width: 0; overflow-x: auto; }
+.snp-row { display: flex; gap: 0.25rem; min-width: max-content; }
+.track .snp-row, .reference-grid { overflow-x: auto; }
+.position-row { color: #68757d; display: flex; font-size: 0.65rem; gap: 0.25rem; min-width: max-content; }
+.position-row span { min-width: 2rem; text-align: center; }
+.snp-tile { align-items: center; border: 1px solid transparent; border-radius: 0.35rem; display: inline-flex; flex-direction: column; height: 2.4rem; justify-content: center; min-width: 2rem; }
+.snp-tile strong { font-size: 0.95rem; line-height: 1; }
+.snp-tile small { font-size: 0.6rem; line-height: 1; opacity: 0.7; }
+.allele-0 { background: #dcecff; color: #174e82; }
+.allele-1 { background: #ffe2b8; color: #874b00; }
+.snp-tile.missing, .missing { background: #eef0f0; border: 1px dashed #8a9698; color: #5e6a6c; }
+.legend { color: #68757d; display: flex; flex-wrap: wrap; font-size: 0.8rem; gap: 1rem; margin: 1rem 0 0 6rem; }
+.legend i { border-radius: 0.25rem; display: inline-flex; font-style: normal; justify-content: center; margin-right: 0.25rem; padding: 0.15rem; width: 1.4rem; }
+.reference-grid { display: grid; gap: 0.35rem; }
+.reference-row { align-items: center; display: flex; gap: 1rem; min-width: max-content; }
+.reference-label { color: #53616b; font-size: 0.75rem; min-width: 9rem; }
+.probability-grid { display: grid; gap: 0.6rem; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); overflow-x: auto; }
+.probability-cell { background: #f4f8f7; border-radius: 0.6rem; display: grid; gap: 0.35rem; padding: 0.65rem; }
+.site-label, .probability-cell small { color: #68757d; font-size: 0.7rem; }
+.probability-bar { background: #dce5e2; border-radius: 1rem; height: 0.45rem; overflow: hidden; }
+.probability-bar span { background: #176b62; display: block; height: 100%; }
+
+@media (max-width: 650px) {
+  .app-shell { padding: 1rem; }
+  .track { align-items: flex-start; flex-direction: column; gap: 0.35rem; }
+  .legend { margin-left: 0; }
+  .reference-row { align-items: flex-start; flex-direction: column; gap: 0.25rem; }
+}
